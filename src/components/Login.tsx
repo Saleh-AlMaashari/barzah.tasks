@@ -32,7 +32,7 @@ const Login: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/barzah.tasks/Barzah Main Theme 3.png')`,
+          backgroundImage: `url('/barzah.tasks/barzah-bg.png')`,
           filter: 'brightness(0.3)'
         }}
       />
