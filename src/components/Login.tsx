@@ -53,6 +53,7 @@ const Login: React.FC = () => {
   className="w-full h-full object-contain mx-auto"
 />
 
+
               </div>
             </div>
             <h1 className="text-2xl font-bold text-[#84aaac] mb-2">Barzah Tasks</h1>
