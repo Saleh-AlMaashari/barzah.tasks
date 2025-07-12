@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { LogIn, Eye, EyeOff } from 'lucide-react';
 import { apiService } from '../services/api';
 import { useAuth } from '../contexts/AuthContext';
+import logo from '../public/logo.png';
+
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -47,8 +49,7 @@ const Login: React.FC = () => {
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
               <div className="w-20 h-20">
-              <img
-  src={`${import.meta.env.BASE_URL}logo.png`}
+              <img src={logo}
   alt="Barzah Logo"
   className="w-full h-full object-contain mx-auto"
 />
