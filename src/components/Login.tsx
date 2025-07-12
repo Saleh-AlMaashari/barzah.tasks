@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { LogIn, Eye, EyeOff } from 'lucide-react';
 import { apiService } from '../services/api';
 import { useAuth } from '../contexts/AuthContext';
-import logo from '../public/logo.png';
-
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -34,7 +32,7 @@ const Login: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/public/Barzah Main Theme 3.png')`,
+          backgroundImage: `url('${import.meta.env.BASE_URL}barzah-bg.png')`,
           filter: 'brightness(0.3)'
         }}
       />
@@ -49,13 +47,11 @@ const Login: React.FC = () => {
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
               <div className="w-20 h-20">
-              <img src={logo}
+              <img
+  src={`${import.meta.env.BASE_URL}logo.png`}
   alt="Barzah Logo"
   className="w-full h-full object-contain mx-auto"
 />
-
-
-
               </div>
             </div>
             <h1 className="text-2xl font-bold text-[#84aaac] mb-2">Barzah Tasks</h1>
