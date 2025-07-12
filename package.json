@@ -10,8 +10,11 @@
     "start:full": "concurrently \"npm run server\" \"npm run dev\"",
     "build": "vite build",
     "lint": "eslint .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d docs",
     "preview": "vite preview"
   },
+
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
