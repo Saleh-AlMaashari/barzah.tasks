@@ -47,11 +47,12 @@ const Login: React.FC = () => {
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
               <div className="w-20 h-20">
-                <img
-                  src="/logo.png"
-                  alt="Barzah Logo"
-                  className="w-full h-full object-contain mx-auto"
-                />
+              <img
+  src={`${import.meta.env.BASE_URL}logo.png`}
+  alt="Barzah Logo"
+  className="w-full h-full object-contain mx-auto"
+/>
+
               </div>
             </div>
             <h1 className="text-2xl font-bold text-[#84aaac] mb-2">Barzah Tasks</h1>

@@ -1,10 +1,11 @@
+// vite.config.ts
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
+  base: '/barzah.tasks/', // اسم الريبو تمامًا مع الـ "/"
+  build: {
+    outDir: 'docs',
   },
+  plugins: [react()],
 });
