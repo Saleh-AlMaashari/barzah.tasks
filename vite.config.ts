@@ -1,11 +1,10 @@
-// vite.config.ts
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/barzah.tasks/', // اسم الريبو تمامًا مع الـ "/"
+  base: '/',
   build: {
-    outDir: 'docs',
+    outDir: 'dist',
   },
   plugins: [react()],
 });
