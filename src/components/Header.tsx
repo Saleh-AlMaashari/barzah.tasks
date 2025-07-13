@@ -13,7 +13,7 @@ const Header: React.FC = () => {
           <div className="flex items-center space-x-3">
             <div className="w-14 sm:w-16 h-14 sm:h-16 rounded-xl overflow-hidden shadow-md bg-white">
               <img
-                src="/barzah.tasks/logo.png"
+                src="logo.png"
                 alt="Barzah Logo"
                 className="w-full h-full object-contain"
               />

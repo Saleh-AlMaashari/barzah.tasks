@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:3001/api';
+const API_BASE_URL = 'https://barzah-tasks.onrender.com';
 
 class ApiService {
   private getAuthHeaders() {
@@ -17,7 +17,7 @@ class ApiService {
   }
 
   async login(email: string, password: string) {
-    const response = await fetch(`${API_BASE_URL}/login`, {
+    const response = await fetch(`${API_BASE_URL}/api/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
@@ -32,7 +32,7 @@ class ApiService {
   }
 
   async register(name: string, email: string, password: string) {
-    const response = await fetch(`${API_BASE_URL}/register`, {
+    const response = await fetch(`${API_BASE_URL}/api/register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, password }),
@@ -47,7 +47,7 @@ class ApiService {
   }
 
   async getUsers() {
-    const response = await fetch(`${API_BASE_URL}/users`, {
+    const response = await fetch(`${API_BASE_URL}/api/users`, {
       headers: this.getAuthHeaders(),
     });
 
@@ -64,7 +64,7 @@ class ApiService {
     if (filters?.category) params.append('category', filters.category);
     if (filters?.search) params.append('search', filters.search);
 
-    const response = await fetch(`${API_BASE_URL}/tasks?${params}`, {
+    const response = await fetch(`${API_BASE_URL}/api/tasks?${params}`, {
       headers: this.getAuthHeaders(),
     });
 
@@ -76,7 +76,7 @@ class ApiService {
   }
 
   async getTask(id: string) {
-    const response = await fetch(`${API_BASE_URL}/tasks/${id}`, {
+    const response = await fetch(`${API_BASE_URL}/api/tasks/${id}`, {
       headers: this.getAuthHeaders(),
     });
 
@@ -94,7 +94,7 @@ class ApiService {
     dueDate: string;
     assignedTo: string;
   }) {
-    const response = await fetch(`${API_BASE_URL}/tasks`, {
+    const response = await fetch(`${API_BASE_URL}/api/tasks`, {
       method: 'POST',
       headers: this.getAuthHeaders(),
       body: JSON.stringify(task),
@@ -116,7 +116,7 @@ class ApiService {
     assignedTo: string;
     status: string;
   }) {
-    const response = await fetch(`${API_BASE_URL}/tasks/${id}`, {
+    const response = await fetch(`${API_BASE_URL}/api/tasks/${id}`, {
       method: 'PUT',
       headers: this.getAuthHeaders(),
       body: JSON.stringify(task),
@@ -131,7 +131,7 @@ class ApiService {
   }
 
   async deleteTask(id: string) {
-    const response = await fetch(`${API_BASE_URL}/tasks/${id}`, {
+    const response = await fetch(`${API_BASE_URL}/api/tasks/${id}`, {
       method: 'DELETE',
       headers: this.getAuthHeaders(),
     });
@@ -144,7 +144,7 @@ class ApiService {
   }
 
   async addComment(taskId: string, text: string) {
-    const response = await fetch(`${API_BASE_URL}/tasks/${taskId}/comments`, {
+    const response = await fetch(`${API_BASE_URL}/api/tasks/${taskId}/comments`, {
       method: 'POST',
       headers: this.getAuthHeaders(),
       body: JSON.stringify({ text }),
@@ -161,7 +161,7 @@ class ApiService {
     const formData = new FormData();
     formData.append('file', file);
 
-    const response = await fetch(`${API_BASE_URL}/tasks/${taskId}/upload`, {
+    const response = await fetch(`${API_BASE_URL}/api/tasks/${taskId}/upload`, {
       method: 'POST',
       headers: this.getAuthHeadersForFormData(),
       body: formData,
@@ -176,7 +176,7 @@ class ApiService {
   }
 
   async getStats() {
-    const response = await fetch(`${API_BASE_URL}/stats`, {
+    const response = await fetch(`${API_BASE_URL}/api/stats`, {
       headers: this.getAuthHeaders(),
     });
 

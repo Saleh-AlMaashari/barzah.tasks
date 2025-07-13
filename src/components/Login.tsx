@@ -32,7 +32,7 @@ const Login: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/barzah.tasks/barzah-bg.png')`,
+          backgroundImage: `url('barzahـbg.png')`,
           filter: 'brightness(0.3)'
         }}
       />
@@ -48,7 +48,7 @@ const Login: React.FC = () => {
             <div className="flex justify-center mb-4">
               <div className="w-20 h-20">
                 <img
-                  src="/barzah.tasks/logo.png"
+                  src="logo.png"
                   alt="Barzah Logo"
                   className="w-full h-full object-contain mx-auto"
                 />

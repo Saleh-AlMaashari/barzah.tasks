@@ -112,7 +112,7 @@ const TaskDetailsModal: React.FC<TaskDetailsModalProps> = ({
 
   const handleDownload = (attachment: any) => {
     const link = document.createElement('a');
-    link.href = `http://localhost:3001/${attachment.path}`;
+    link.href = `https://barzah-tasks.onrender.com/${attachment.path}`;
     link.download = attachment.originalName;
     link.click();
   };
